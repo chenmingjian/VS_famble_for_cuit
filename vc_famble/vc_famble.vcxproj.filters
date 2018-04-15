@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{427b88a2-012b-4b2d-ad56-76967f8cde7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="neural network layer">
+      <UniqueIdentifier>{d875fdff-336c-40ad-9c8d-4da92dbdb46d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cmd_parser.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="cuda.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="list.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="option_list.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd_parser.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="option_list.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
