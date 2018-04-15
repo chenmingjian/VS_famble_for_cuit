@@ -3,6 +3,7 @@
 #include <string.h>
 #include "utils.h"
 
+//读取data的信息，用于训练时读取。
 list *read_data_cfg(char *filename)
 {
 	FILE *file = fopen(filename, "r");
@@ -31,6 +32,7 @@ list *read_data_cfg(char *filename)
 	return options;
 }
 
+//读取的"key = value"字符串，转化成键值对。
 int read_option(char *s, list *options)
 {
 	size_t i;
@@ -49,6 +51,7 @@ int read_option(char *s, list *options)
 	return 1;
 }
 
+//把键值对插入链表。
 void option_insert(list *l, char *key, char *val)
 {
 	kvp *p = malloc(sizeof(kvp));

@@ -1,7 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
-
+//list 是一个双向链表。
 typedef struct node {
 	void *val;
 	struct node *next;

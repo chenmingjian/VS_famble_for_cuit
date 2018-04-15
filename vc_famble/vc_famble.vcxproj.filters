@@ -7,6 +7,9 @@
     <Filter Include="neural network layer">
       <UniqueIdentifier>{d875fdff-336c-40ad-9c8d-4da92dbdb46d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{537035d8-a4e6-42c3-84e9-49b19fac172b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cmd_parser.c">
@@ -41,6 +44,15 @@
     </ClInclude>
     <ClInclude Include="option_list.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="network.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="layer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>network</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

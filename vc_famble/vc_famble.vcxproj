@@ -98,8 +98,11 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
   <ItemGroup>
     <ClInclude Include="cmd_parser.h" />
     <ClInclude Include="cuda.h" />
+    <ClInclude Include="layer.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="network.h" />
     <ClInclude Include="option_list.h" />
+    <ClInclude Include="tree.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

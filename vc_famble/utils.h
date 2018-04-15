@@ -2,7 +2,9 @@
 #define __UTILS_H__
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
+#include <time.h>
 
 #include "cmd_parser.h"
 #include "list.h"

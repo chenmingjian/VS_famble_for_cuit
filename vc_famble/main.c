@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include "utils.h"
+#include "network.h"
 
 int gpu_index = 0;
 
 void train(char *datacfg, char *cfgfile, char* weightfile, int *gpus, int ngpus, int clear)
 {
 	list *options = read_data_cfg(datacfg);
-	char *train_images = option_find_str(options, "train", "data/train.list");
+	char *train_images = option_find_str(options, "train", "data/train_addr.txt");
 	char *backup_directory = option_find_str(options, "backup", "backup/");
+	
+	srand(time(0));
+	float avg_loss = -1;
+	network **nets = calloc(ngpus, sizeof(network));
 }
 
 
