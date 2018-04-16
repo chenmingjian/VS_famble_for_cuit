@@ -49,42 +49,43 @@ typedef struct update_args {
 	int batch;
 	float learning_rate; //学习率
 	float momentum;//动量
-	float decay;//衰减
-	int adam;
-	float B1;
-	float B2;
-	float eps;
-	int t;
+	float decay;//衰减:调节模型复杂度对损失函数的影响,防止过拟合。
+				//weight dacay is one kind of regularization.
+	int adam; //一个优化算法。
+	float B1; //pass
+	float B2; //pass
+	float eps;//pass
+	int t;//pass
 } update_args;
 
 typedef struct layer {
 	LAYER_TYPE type;
 	ACTIVATION activation;
-	COST_TYPE cost_type;
+	COST_TYPE cost_type; //每一层都有不同的cost函数么，不是一个网络的cost是相同的吗？
 	void(*forward)   (struct layer, struct network);
 	void(*backward)  (struct layer, struct network);
 	void(*update)    (struct layer, update_args);
 	void(*forward_gpu)   (struct layer, struct network);
 	void(*backward_gpu)  (struct layer, struct network);
 	void(*update_gpu)    (struct layer, update_args);
-	int batch_normalize;
-	int shortcut;
+	int batch_normalize; //bn
+	int shortcut;//pass，可能类似于残差网络的F(x)+x。
 	int batch;
-	int forced;
-	int flipped;
+	int forced; //pass
+	int flipped;//pass
 	int inputs;
 	int outputs;
 	int nweights;
 	int nbiases;
-	int extra;
-	int truths;
+	int extra; //pass
+	int truths;//pass
 	int h, w, c;
 	int out_h, out_w, out_c;
 	int n;
-	int max_boxes;
-	int groups;
-	int size;
-	int side;
+	int max_boxes;//pass
+	int groups;//pass
+	int size;//pass
+	int side;//pass
 	int stride;
 	int reverse;
 	int flatten;
@@ -94,49 +95,49 @@ typedef struct layer {
 	int flip;
 	int index;
 	int binary;
-	int xnor;
+	int xnor;//pass
 	int steps;
 	int hidden;
-	int truth;
-	float smooth;
-	float dot;
-	float angle;
-	float jitter;
-	float saturation;
-	float exposure;
+	int truth;//pass
+	float smooth;//pass
+	float dot;//pass
+	float angle;//角度
+	float jitter;//抖动
+	float saturation;//饱和度
+	float exposure;//曝光度。
 	float shift;
-	float ratio;
-	float learning_rate_scale;
-	float clip;
+	float ratio;//pass,比率？
+	float learning_rate_scale;//pass
+	float clip;//pass，修剪？
 	int softmax;
 	int classes;
 	int coords;
 	int background;
-	int rescore;
+	int rescore; //pass
 	int objectness;
-	int joint;
+	int joint;//pass
 	int noadjust;
 	int reorg;
 	int log;
 	int tanh;
-	int *mask;
+	int *mask;//pass
 	int total;
 
-	float alpha;
-	float beta;
-	float kappa;
+	float alpha;//pass
+	float beta;//pass
+	float kappa;//pass
 
-	float coord_scale;
-	float object_scale;
-	float noobject_scale;
-	float mask_scale;
-	float class_scale;
+	float coord_scale;//pass
+	float object_scale;//pass
+	float noobject_scale;//pass
+	float mask_scale;//pass
+	float class_scale;//pass
 	int bias_match;
 	int random;
 	float ignore_thresh;
 	float truth_thresh;
 	float thresh;
-	float focus;
+	float focus;//pass
 	int classfix;
 	int absolute;
 
@@ -192,14 +193,14 @@ typedef struct layer {
 	float * mean_delta;
 	float * variance_delta;
 
-	float * rolling_mean;
-	float * rolling_variance;
+	float * rolling_mean;//pass
+	float * rolling_variance;//pass
 
 	float * x;
 	float * x_norm;
 
-	float * m;
-	float * v;
+	float * m;//pass
+	float * v;//pass
 
 	float * bias_m;
 	float * bias_v;

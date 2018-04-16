@@ -9,9 +9,9 @@
 #include <time.h>
 #include <stdio.h>
 
+
 void check_error(cudaError_t status)
 {
-	//cudaDeviceSynchronize();
 	cudaError_t status2 = cudaGetLastError();
 	if (status != cudaSuccess)
 	{
