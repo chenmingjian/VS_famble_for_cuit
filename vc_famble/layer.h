@@ -1,9 +1,10 @@
 #pragma once
 #include  "tree.h"
+//好多激活函数认不到。
 typedef enum ACTIVATION {
 	LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN
 } ACTIVATION;
-
+//什么叫做二进制激活？
 typedef enum BINARY_ACTIVATION {
 	MULT, ADD, SUB, DIV
 } BINARY_ACTIVATION;
@@ -46,9 +47,9 @@ typedef enum COST_TYPE {
 
 typedef struct update_args {
 	int batch;
-	float learning_rate;
-	float momentum;
-	float decay;
+	float learning_rate; //学习率
+	float momentum;//动量
+	float decay;//衰减
 	int adam;
 	float B1;
 	float B2;
